@@ -4,14 +4,14 @@ All URIs are relative to *https://api.webseite-herunterladen.de/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**placeScreenshotOrderAuthenticated**](ScreenshotApi.md#placeScreenshotOrderAuthenticated) | **GET** /capture/{token}/{hash} | 
-[**placeScreenshotOrderUnauthenticated**](ScreenshotApi.md#placeScreenshotOrderUnauthenticated) | **GET** /capture/{token} | 
+[**captureScreenshotAuthenticated**](ScreenshotApi.md#captureScreenshotAuthenticated) | **GET** /capture/{token}/{hash} | 
+[**captureScreenshotUnauthenticated**](ScreenshotApi.md#captureScreenshotUnauthenticated) | **GET** /capture/{token} | 
 
 
 
-## placeScreenshotOrderAuthenticated
+## captureScreenshotAuthenticated
 
-> File placeScreenshotOrderAuthenticated(token, hash, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners)
+> File captureScreenshotAuthenticated(token, hash, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners)
 
 
 
@@ -58,10 +58,10 @@ String proxy = null; // String | Use an address of a proxy server through which 
 Boolean adblock = false; // Boolean | Prevent ads from being displayed. Block requests from popular ad networks and hide frequent ads.
 Boolean hideCookieBanners = false; // Boolean | Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
 try {
-    File result = apiInstance.placeScreenshotOrderAuthenticated(token, hash, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners);
+    File result = apiInstance.captureScreenshotAuthenticated(token, hash, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ScreenshotApi#placeScreenshotOrderAuthenticated");
+    System.err.println("Exception when calling ScreenshotApi#captureScreenshotAuthenticated");
     e.printStackTrace();
 }
 ```
@@ -119,9 +119,9 @@ No authorization required
 - **Accept**: application/json, application/pdf, image/jpeg, image/png
 
 
-## placeScreenshotOrderUnauthenticated
+## captureScreenshotUnauthenticated
 
-> File placeScreenshotOrderUnauthenticated(token, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners)
+> File captureScreenshotUnauthenticated(token, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners)
 
 
 
@@ -167,10 +167,10 @@ String proxy = null; // String | Use an address of a proxy server through which 
 Boolean adblock = false; // Boolean | Prevent ads from being displayed. Block requests from popular ad networks and hide frequent ads.
 Boolean hideCookieBanners = false; // Boolean | Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
 try {
-    File result = apiInstance.placeScreenshotOrderUnauthenticated(token, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners);
+    File result = apiInstance.captureScreenshotUnauthenticated(token, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling ScreenshotApi#placeScreenshotOrderUnauthenticated");
+    System.err.println("Exception when calling ScreenshotApi#captureScreenshotUnauthenticated");
     e.printStackTrace();
 }
 ```

@@ -95,22 +95,22 @@ public class ScreenshotApi {
    * @param hideCookieBanners Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
    * @return File
   */
-  public File placeScreenshotOrderAuthenticated (String token, String hash, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public File captureScreenshotAuthenticated (String token, String hash, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'token' is set
     if (token == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling placeScreenshotOrderAuthenticated",
-        new ApiException(400, "Missing the required parameter 'token' when calling placeScreenshotOrderAuthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling captureScreenshotAuthenticated",
+        new ApiException(400, "Missing the required parameter 'token' when calling captureScreenshotAuthenticated"));
     }
     // verify the required parameter 'hash' is set
     if (hash == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'hash' when calling placeScreenshotOrderAuthenticated",
-        new ApiException(400, "Missing the required parameter 'hash' when calling placeScreenshotOrderAuthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'hash' when calling captureScreenshotAuthenticated",
+        new ApiException(400, "Missing the required parameter 'hash' when calling captureScreenshotAuthenticated"));
     }
     // verify the required parameter 'url' is set
     if (url == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling placeScreenshotOrderAuthenticated",
-        new ApiException(400, "Missing the required parameter 'url' when calling placeScreenshotOrderAuthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling captureScreenshotAuthenticated",
+        new ApiException(400, "Missing the required parameter 'url' when calling captureScreenshotAuthenticated"));
     }
 
     // create path and map variables
@@ -197,23 +197,23 @@ public class ScreenshotApi {
    * Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
    * @param token A valid token is needed to make paid API calls. Tokens can be managed from your account.   * @param hash The hash value is for authenticated requests. If you want to publish this URL, you should use the authenticated requests.   * @param url The URL of the website you want to capture. Please include the protocol (http:// or https://).   * @param fileType The image file format of the captured screenshot. Either png, jpeg or PDF with 72 dpi.   * @param ttl Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days.   * @param invalidate Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged.   * @param full Set this parameter to true if you want to screenshot the whole web page in full size.   * @param lazyloadScroll Set this parameter to true to scroll down through the entire page before taking a screenshot. This is useful for triggering animations or lazy load elements in full screen.   * @param delay The delay in milliseconds to wait after the page loads before taking the screenshot. This is in milliseconds. One second is 1000 milliseconds. From 0 milliseconds to a maximum of 10,000 milliseconds.   * @param width The width, in pixels, of the browser viewport to use.   * @param height The height, in pixels, of the browser viewport to use. Ignored if you set full to true.   * @param quality The quality of the image between 0 and 100. This works only for the jpeg format, for PNG images the parameter is applied only during compression.   * @param scale The scale factor of the device to use when taking the screenshot. For example, a scale factor of 2 produces a high-resolution screenshot suitable for viewing on Retina devices. The larger the scale factor, the larger the screenshot produced.   * @param x The starting point of a section screenshot on the X axis.   * @param y The starting point of a section screenshot on the Y axis.   * @param redirect If you set Redirect, the response will be a 302 redirect to the screenshot file in our CDN.   * @param language Sets the Accept-Language header on requests to the target URL so that you can take screenshots from a website with a specific language.   * @param randomUserAgent Sets a random user agent header to emulate a different devices when taking screenshots.   * @param userAgent Sets the user agent header to emulate a specific device when taking screenshots.   * @param headers A semicolon-separated list of header parameters to be used when capturing the screenshot. Each header should be passed as a key-value pair and multiple pairs should be separated by a semicolon.   * @param cookies A semicolon-separated list of cookies to be used when capturing the screenshot. Each cookies should be passed as a key-value pair and multiple pairs should be separated by a semicolon.   * @param css Inject your custom CSS.   * @param js Inject your custom Javascript.   * @param wait Wait until the specified CSS selector matches an element present in the page before taking a screenshot. The process is canceled after 60 seconds.   * @param element Takes a screenshot of the first element matched by the specified CSS selector. This is ignored if full is true. (This option cannot be used with the PDF export format.)   * @param timezone The IANA time zone identifier used for this capture.   * @param device The device used in the emulation.   * @param latitude The latitude used in the emulation of the geo-location.   * @param longitude The longitude used in the emulation of the geo-location.   * @param accuracy The accuracy in meters used in the emulation of the geo-location.   * @param proxy Use an address of a proxy server through which the screenshot should be taken. The proxy address should be formatted as http://username:password@proxyserver.com:31280   * @param adblock Prevent ads from being displayed. Block requests from popular ad networks and hide frequent ads.   * @param hideCookieBanners Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
   */
-  public void placeScreenshotOrderAuthenticated (String token, String hash, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+  public void captureScreenshotAuthenticated (String token, String hash, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'token' is set
     if (token == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling placeScreenshotOrderAuthenticated",
-        new ApiException(400, "Missing the required parameter 'token' when calling placeScreenshotOrderAuthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling captureScreenshotAuthenticated",
+        new ApiException(400, "Missing the required parameter 'token' when calling captureScreenshotAuthenticated"));
     }
     // verify the required parameter 'hash' is set
     if (hash == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'hash' when calling placeScreenshotOrderAuthenticated",
-        new ApiException(400, "Missing the required parameter 'hash' when calling placeScreenshotOrderAuthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'hash' when calling captureScreenshotAuthenticated",
+        new ApiException(400, "Missing the required parameter 'hash' when calling captureScreenshotAuthenticated"));
     }
     // verify the required parameter 'url' is set
     if (url == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling placeScreenshotOrderAuthenticated",
-        new ApiException(400, "Missing the required parameter 'url' when calling placeScreenshotOrderAuthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling captureScreenshotAuthenticated",
+        new ApiException(400, "Missing the required parameter 'url' when calling captureScreenshotAuthenticated"));
     }
 
     // create path and map variables
@@ -335,17 +335,17 @@ public class ScreenshotApi {
    * @param hideCookieBanners Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
    * @return File
   */
-  public File placeScreenshotOrderUnauthenticated (String token, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public File captureScreenshotUnauthenticated (String token, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'token' is set
     if (token == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling placeScreenshotOrderUnauthenticated",
-        new ApiException(400, "Missing the required parameter 'token' when calling placeScreenshotOrderUnauthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling captureScreenshotUnauthenticated",
+        new ApiException(400, "Missing the required parameter 'token' when calling captureScreenshotUnauthenticated"));
     }
     // verify the required parameter 'url' is set
     if (url == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling placeScreenshotOrderUnauthenticated",
-        new ApiException(400, "Missing the required parameter 'url' when calling placeScreenshotOrderUnauthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling captureScreenshotUnauthenticated",
+        new ApiException(400, "Missing the required parameter 'url' when calling captureScreenshotUnauthenticated"));
     }
 
     // create path and map variables
@@ -432,18 +432,18 @@ public class ScreenshotApi {
    * Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
    * @param token A valid token is needed to make paid API calls. Tokens can be managed from your account.   * @param url The URL of the website you want to capture. Please include the protocol (http:// or https://).   * @param fileType The image file format of the captured screenshot. Either png, jpeg or PDF with 72 dpi.   * @param ttl Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days.   * @param invalidate Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged.   * @param full Set this parameter to true if you want to screenshot the whole web page in full size.   * @param lazyloadScroll Set this parameter to true to scroll down through the entire page before taking a screenshot. This is useful for triggering animations or lazy load elements in full screen.   * @param delay The delay in milliseconds to wait after the page loads before taking the screenshot. This is in milliseconds. One second is 1000 milliseconds. From 0 milliseconds to a maximum of 10,000 milliseconds.   * @param width The width, in pixels, of the browser viewport to use.   * @param height The height, in pixels, of the browser viewport to use. Ignored if you set full to true.   * @param quality The quality of the image between 0 and 100. This works only for the jpeg format, for PNG images the parameter is applied only during compression.   * @param scale The scale factor of the device to use when taking the screenshot. For example, a scale factor of 2 produces a high-resolution screenshot suitable for viewing on Retina devices. The larger the scale factor, the larger the screenshot produced.   * @param x The starting point of a section screenshot on the X axis.   * @param y The starting point of a section screenshot on the Y axis.   * @param redirect If you set Redirect, the response will be a 302 redirect to the screenshot file in our CDN.   * @param language Sets the Accept-Language header on requests to the target URL so that you can take screenshots from a website with a specific language.   * @param randomUserAgent Sets a random user agent header to emulate a different devices when taking screenshots.   * @param userAgent Sets the user agent header to emulate a specific device when taking screenshots.   * @param headers A semicolon-separated list of header parameters to be used when capturing the screenshot. Each header should be passed as a key-value pair and multiple pairs should be separated by a semicolon.   * @param cookies A semicolon-separated list of cookies to be used when capturing the screenshot. Each cookies should be passed as a key-value pair and multiple pairs should be separated by a semicolon.   * @param css Inject your custom CSS.   * @param js Inject your custom Javascript.   * @param wait Wait until the specified CSS selector matches an element present in the page before taking a screenshot. The process is canceled after 60 seconds.   * @param element Takes a screenshot of the first element matched by the specified CSS selector. This is ignored if full is true. (This option cannot be used with the PDF export format.)   * @param timezone The IANA time zone identifier used for this capture.   * @param device The device used in the emulation.   * @param latitude The latitude used in the emulation of the geo-location.   * @param longitude The longitude used in the emulation of the geo-location.   * @param accuracy The accuracy in meters used in the emulation of the geo-location.   * @param proxy Use an address of a proxy server through which the screenshot should be taken. The proxy address should be formatted as http://username:password@proxyserver.com:31280   * @param adblock Prevent ads from being displayed. Block requests from popular ad networks and hide frequent ads.   * @param hideCookieBanners Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
   */
-  public void placeScreenshotOrderUnauthenticated (String token, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
+  public void captureScreenshotUnauthenticated (String token, String url, String fileType, Long ttl, Boolean invalidate, Boolean full, Boolean lazyloadScroll, Long delay, Long width, Long height, Long quality, BigDecimal scale, Long x, Long y, Boolean redirect, String language, Boolean randomUserAgent, String userAgent, String headers, String cookies, String css, String js, String wait, String element, String timezone, String device, BigDecimal latitude, BigDecimal longitude, BigDecimal accuracy, String proxy, Boolean adblock, Boolean hideCookieBanners, final Response.Listener<File> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
     // verify the required parameter 'token' is set
     if (token == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling placeScreenshotOrderUnauthenticated",
-        new ApiException(400, "Missing the required parameter 'token' when calling placeScreenshotOrderUnauthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'token' when calling captureScreenshotUnauthenticated",
+        new ApiException(400, "Missing the required parameter 'token' when calling captureScreenshotUnauthenticated"));
     }
     // verify the required parameter 'url' is set
     if (url == null) {
-      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling placeScreenshotOrderUnauthenticated",
-        new ApiException(400, "Missing the required parameter 'url' when calling placeScreenshotOrderUnauthenticated"));
+      VolleyError error = new VolleyError("Missing the required parameter 'url' when calling captureScreenshotUnauthenticated",
+        new ApiException(400, "Missing the required parameter 'url' when calling captureScreenshotUnauthenticated"));
     }
 
     // create path and map variables

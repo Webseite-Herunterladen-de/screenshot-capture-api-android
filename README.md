@@ -98,10 +98,10 @@ public class ScreenshotApiExample {
         Boolean adblock = false; // Boolean | Prevent ads from being displayed. Block requests from popular ad networks and hide frequent ads.
         Boolean hideCookieBanners = false; // Boolean | Prevent cookie banners and pop-ups from being displayed. The best possible result is tried.
         try {
-            File result = apiInstance.placeScreenshotOrderAuthenticated(token, hash, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners);
+            File result = apiInstance.captureScreenshotAuthenticated(token, hash, url, fileType, ttl, invalidate, full, lazyloadScroll, delay, width, height, quality, scale, x, y, redirect, language, randomUserAgent, userAgent, headers, cookies, css, js, wait, element, timezone, device, latitude, longitude, accuracy, proxy, adblock, hideCookieBanners);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ScreenshotApi#placeScreenshotOrderAuthenticated");
+            System.err.println("Exception when calling ScreenshotApi#captureScreenshotAuthenticated");
             e.printStackTrace();
         }
     }
@@ -115,8 +115,8 @@ All URIs are relative to *https://api.webseite-herunterladen.de/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ScreenshotApi* | [**placeScreenshotOrderAuthenticated**](docs/ScreenshotApi.md#placeScreenshotOrderAuthenticated) | **GET** /capture/{token}/{hash} | 
-*ScreenshotApi* | [**placeScreenshotOrderUnauthenticated**](docs/ScreenshotApi.md#placeScreenshotOrderUnauthenticated) | **GET** /capture/{token} | 
+*ScreenshotApi* | [**captureScreenshotAuthenticated**](docs/ScreenshotApi.md#captureScreenshotAuthenticated) | **GET** /capture/{token}/{hash} | 
+*ScreenshotApi* | [**captureScreenshotUnauthenticated**](docs/ScreenshotApi.md#captureScreenshotUnauthenticated) | **GET** /capture/{token} | 
 
 
 ## Documentation for Models
