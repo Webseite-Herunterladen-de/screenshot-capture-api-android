@@ -1,4 +1,4 @@
-# openapi-android-client
+# wh-android-client
 
 ## Requirements
 
