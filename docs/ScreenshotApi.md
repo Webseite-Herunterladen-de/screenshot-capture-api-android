@@ -25,7 +25,7 @@ val apiInstance = ScreenshotApi()
 val token : kotlin.String = token_example // kotlin.String | A valid token is needed to make paid API calls. Tokens can be managed from your account.
 val hash : kotlin.String = hash_example // kotlin.String | The hash value is for authenticated requests. If you want to publish this URL, you should use the authenticated requests.
 val url : kotlin.String = url_example // kotlin.String | The URL of the website you want to capture. Please include the protocol (http:// or https://).
-val fileType : kotlin.String = fileType_example // kotlin.String | The image file format of the captured screenshot. Either png, jpeg or PDF with 72 dpi.
+val fileType : kotlin.String = fileType_example // kotlin.String | The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi.
 val ttl : kotlin.Long = 789 // kotlin.Long | Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days.
 val invalidate : kotlin.Boolean = true // kotlin.Boolean | Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged.
 val full : kotlin.Boolean = true // kotlin.Boolean | Set this parameter to true if you want to screenshot the whole web page in full size.
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
  **token** | **kotlin.String**| A valid token is needed to make paid API calls. Tokens can be managed from your account. |
  **hash** | **kotlin.String**| The hash value is for authenticated requests. If you want to publish this URL, you should use the authenticated requests. |
  **url** | **kotlin.String**| The URL of the website you want to capture. Please include the protocol (http:// or https://). |
- **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg or PDF with 72 dpi. | [optional] [enum: png, pdf, jpeg]
+ **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. | [optional] [enum: png, pdf, jpeg, webp]
  **ttl** | **kotlin.Long**| Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days. | [optional] [enum: ]
  **invalidate** | **kotlin.Boolean**| Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged. | [optional]
  **full** | **kotlin.Boolean**| Set this parameter to true if you want to screenshot the whole web page in full size. | [optional]
@@ -116,7 +116,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/pdf, image/jpeg, image/png
+ - **Accept**: application/json, application/pdf, image/jpeg, image/png, image/webp
 
 <a name="captureScreenshotUnauthenticated"></a>
 # **captureScreenshotUnauthenticated**
@@ -135,7 +135,7 @@ Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful scree
 val apiInstance = ScreenshotApi()
 val token : kotlin.String = token_example // kotlin.String | A valid token is needed to make paid API calls. Tokens can be managed from your account.
 val url : kotlin.String = url_example // kotlin.String | The URL of the website you want to capture. Please include the protocol (http:// or https://).
-val fileType : kotlin.String = fileType_example // kotlin.String | The image file format of the captured screenshot. Either png, jpeg or PDF with 72 dpi.
+val fileType : kotlin.String = fileType_example // kotlin.String | The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi.
 val ttl : kotlin.Long = 789 // kotlin.Long | Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days.
 val invalidate : kotlin.Boolean = true // kotlin.Boolean | Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged.
 val full : kotlin.Boolean = true // kotlin.Boolean | Set this parameter to true if you want to screenshot the whole web page in full size.
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **kotlin.String**| A valid token is needed to make paid API calls. Tokens can be managed from your account. |
  **url** | **kotlin.String**| The URL of the website you want to capture. Please include the protocol (http:// or https://). |
- **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg or PDF with 72 dpi. | [optional] [enum: png, pdf, jpeg]
+ **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. | [optional] [enum: png, pdf, jpeg, webp]
  **ttl** | **kotlin.Long**| Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days. | [optional] [enum: ]
  **invalidate** | **kotlin.Boolean**| Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged. | [optional]
  **full** | **kotlin.Boolean**| Set this parameter to true if you want to screenshot the whole web page in full size. | [optional]
@@ -225,5 +225,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/pdf, image/jpeg, image/png
+ - **Accept**: application/json, application/pdf, image/jpeg, image/png, image/webp
 
