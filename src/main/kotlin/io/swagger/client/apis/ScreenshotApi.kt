@@ -23,7 +23,7 @@ class ScreenshotApi(basePath: kotlin.String = "https://api.webseite-herunterlade
      * @param token A valid token is needed to make paid API calls. Tokens can be managed from your account. 
      * @param hash The hash value is for authenticated requests. If you want to publish this URL, you should use the authenticated requests. 
      * @param url The URL of the website you want to capture. Please include the protocol (http:// or https://). 
-     * @param fileType The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. (optional)
+     * @param fileType The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. (optional, default to png)
      * @param ttl Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days. (optional)
      * @param invalidate Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged. (optional)
      * @param full Set this parameter to true if you want to screenshot the whole web page in full size. (optional)
@@ -79,7 +79,7 @@ class ScreenshotApi(basePath: kotlin.String = "https://api.webseite-herunterlade
      * Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
      * @param token A valid token is needed to make paid API calls. Tokens can be managed from your account. 
      * @param url The URL of the website you want to capture. Please include the protocol (http:// or https://). 
-     * @param fileType The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. (optional)
+     * @param fileType The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. (optional, default to png)
      * @param ttl Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days. (optional)
      * @param invalidate Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged. (optional)
      * @param full Set this parameter to true if you want to screenshot the whole web page in full size. (optional)

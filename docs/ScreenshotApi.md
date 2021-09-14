@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
  **token** | **kotlin.String**| A valid token is needed to make paid API calls. Tokens can be managed from your account. |
  **hash** | **kotlin.String**| The hash value is for authenticated requests. If you want to publish this URL, you should use the authenticated requests. |
  **url** | **kotlin.String**| The URL of the website you want to capture. Please include the protocol (http:// or https://). |
- **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. | [optional] [enum: png, pdf, jpeg, webp]
+ **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. | [optional] [default to png] [enum: png, pdf, jpeg, webp]
  **ttl** | **kotlin.Long**| Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days. | [optional] [enum: ]
  **invalidate** | **kotlin.Boolean**| Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged. | [optional]
  **full** | **kotlin.Boolean**| Set this parameter to true if you want to screenshot the whole web page in full size. | [optional]
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **kotlin.String**| A valid token is needed to make paid API calls. Tokens can be managed from your account. |
  **url** | **kotlin.String**| The URL of the website you want to capture. Please include the protocol (http:// or https://). |
- **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. | [optional] [enum: png, pdf, jpeg, webp]
+ **fileType** | **kotlin.String**| The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. | [optional] [default to png] [enum: png, pdf, jpeg, webp]
  **ttl** | **kotlin.Long**| Number of seconds the capture file is cached by our CDN. An API request that is loaded through the cache does not count as a paid request. You can set a number of seconds from 0 seconds up to 2592000 seconds. This is a maximum of 30 days. | [optional] [enum: ]
  **invalidate** | **kotlin.Boolean**| Force the API to invalidate the cache and capture a new screenshot. This call costs you additional money, because a call of a cache hit is not charged. | [optional]
  **full** | **kotlin.Boolean**| Set this parameter to true if you want to screenshot the whole web page in full size. | [optional]
