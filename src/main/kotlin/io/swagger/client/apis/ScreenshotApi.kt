@@ -1,6 +1,6 @@
 /**
  * Screenshot Capture API
- * Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
+ * screenshot-capture-api.com Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
  *
  * OpenAPI spec version: 1.0.0
  * 
@@ -15,11 +15,11 @@ import io.swagger.client.models.ErrorModel
 
 import io.swagger.client.infrastructure.*
 
-class ScreenshotApi(basePath: kotlin.String = "https://api.webseite-herunterladen.de/v1") : ApiClient(basePath) {
+class ScreenshotApi(basePath: kotlin.String = "https://api.screenshot-capture-api.com/v1") : ApiClient(basePath) {
 
     /**
      * 
-     * Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
+     * screenshot-capture-api.com Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
      * @param token A valid token is needed to make paid API calls. Tokens can be managed from your account. 
      * @param hash The hash value is for authenticated requests. If you want to publish this URL, you should use the authenticated requests. 
      * @param url The URL of the website you want to capture. Please include the protocol (http:// or https://). 
@@ -76,7 +76,7 @@ class ScreenshotApi(basePath: kotlin.String = "https://api.webseite-herunterlade
     }
     /**
      * 
-     * Webseite-Herunterladen.de Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
+     * screenshot-capture-api.com Screenshot Capture is a very simple but powerful screenshot API that anyone can easily use to create pixel-perfect website screenshots. It always uses a recent version of Chrome to ensure that all modern web features are fully supported and rendering is exactly as your customers would expect.
      * @param token A valid token is needed to make paid API calls. Tokens can be managed from your account. 
      * @param url The URL of the website you want to capture. Please include the protocol (http:// or https://). 
      * @param fileType The image file format of the captured screenshot. Either png, jpeg, webp or PDF with 72 dpi. (optional, default to png)
